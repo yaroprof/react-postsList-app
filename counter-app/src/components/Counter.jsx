@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const Counter = () =>{
+const Counter = function(){
 
 	const [count, setCount] = useState(0)
 
@@ -14,9 +14,10 @@ const Counter = () =>{
 
 	return(
 		<div>
-			<h2>counter</h2>
-			<button onClick={increment}>Increment</button>   {/* функції increment/ decrement ми не викликаємо, а передаємо як посилання*/}
+			<h2>{count}</h2>
 			<button onClick={decrement}>Decrement</button>
+			<button onClick={increment}>Increment</button>   {/* функції increment/ decrement ми не викликаємо, а передаємо як посилання*/}
+			
 		</div>
 		
 	)
